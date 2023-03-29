@@ -14,7 +14,7 @@ int main()
 	return 0;
 }
 
-Ret<std::string> loadFileToString(
+std::string loadFileToString(
 		const std::string& filePath)
 {
 	FILE* file = fopen(filePath.c_str(), "rb");
