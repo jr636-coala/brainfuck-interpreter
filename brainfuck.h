@@ -40,7 +40,7 @@ private:
 
 		{',', [](BF& b){b.cell[b.pointer] = (*b.getchar)();}},
 
-		{'[', [](BF& b){if(!b.cell[b.pointer]){int i,k=b.programIndex;i=k;do i=b.program.find(']',i)+1,k=b.program.find('[',k+1);while(k<i&&k!=-1);b.programIndex=i;}}},
+		{'[', [](BF& b){if(!b.cell[b.pointer]){int i,k=b.programIndex;i=k;do i=b.program.find(']',i)+1,k=b.program.find('[',k+1);while(k<i&&k!=-1);b.programIndex=i-1;}}},
 
 		{']', [](BF& b){int i,k=b.programIndex;i=k;do i=b.program.rfind(']',i-1),k=b.program.rfind('[',k);while(k--<i);b.programIndex=k;}}
 	};
