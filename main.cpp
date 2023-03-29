@@ -1,9 +1,10 @@
 #include <iostream>
-
-using namespace std;
+#include "/usr/include/jlib/fileio.h"
+#include "brainfuck.h"
 
 int main()
 {
-	cout << "Hello World!" << endl;
+	Brainfuck b((char(*)())&std::getchar);
+	std::cout << b.run(JLib::FileIO::loadFileToString("../program1.bf")) << '\n';
 	return 0;
 }

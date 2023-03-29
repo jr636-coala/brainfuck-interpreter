@@ -70,4 +70,5 @@ Thumbs.db
 # --------
 *.dll
 *.exe
-
+/brainfuck-interpreter.pro
+build-brainfuck-interpreter-Desktop-Debug/
